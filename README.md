@@ -1,4 +1,4 @@
-This project has the goal of building an algorithm reading a (European) license plate from an image and given an output string with the respective probability. The aim is to implement this using only the numpy and matplotlib packages, except for the character recognition, where PyTorch is also used to build a CNN.
+This project has the goal of building an algorithm reading a (European) license plate from an image and giving an output string with the respective probability. The aim is to implement this using only the numpy and matplotlib packages, except for the character recognition, where PyTorch is also used to build a CNN.
 
 ---
 
