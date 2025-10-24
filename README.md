@@ -16,23 +16,23 @@ Each connecting series of signal pixels is consolidated into a contour object. E
 
 ## Isolating Characters on the License Plate
 
-## 1. Segmentation of the Individual Characters
+### 1. Segmentation of the Individual Characters
 
 The isolated grey scaled license plate is simply binarised similarly to above. As it is assumed that the license plates contain black letters on white background, the thresholding is inverted, such that the letters are now white (signal) in front of a black background. 
 
 In the binarised image, contours are again searched and filtered according to an expected range of sized and aspect ratios. Each characters contour is used to gain the bounding box, isolating each individual character.
 
-# 2. Rescaling
+### 2. Rescaling
 
 These individual characters are then rescaled, such that they fit onto a $28 \times 28$ canvas, compatible with a **EMNIST**-trained **CNN**.
 
 ## The Convolutional Neural Network
 
-## 1. Training the Model
+### 1. Training the Model
 
 To recognise the characters, a simple **CNN** is trained on the **EMNIST** data set [1]  (filtered for digits and capital letters) in a first step, and after convergence **fine tuned** on a personally collected data set using European license plate fonts, found [here](https://github.com/CKleiber/ELPF-data).
 
-## 2. Applying the Model
+### 2. Applying the Model
 
 Each character of the license plate is then evaluated with the model to get a **softmax** probability of each potential character. These probabilities are then used to combine all possible license plates and assign conditional probabilities. The most likely license plates are returned as a string with the respective probabilities.
 
