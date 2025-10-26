@@ -30,7 +30,7 @@ These individual characters are then rescaled, such that they fit onto a $28 \ti
 
 ### 1. Training the Model
 
-To recognise the characters, a simple **CNN** is trained on the **EMNIST** data set [1]  (filtered for digits and capital letters) in a first step, and after convergence **fine tuned** on a personally collected data set using European license plate fonts, found [here](https://github.com/CKleiber/ELPF-data).
+To recognise the characters, a simple **CNN** is trained on the **EMNIST** data set [1] (filtered for digits and capital letters) in a first step, and after convergence **fine tuned** on a personally collected data set using European license plate fonts, found [here](https://github.com/CKleiber/ELPF-data).
 
 ### 2. Applying the Model
 
